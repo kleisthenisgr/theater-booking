@@ -1,73 +1,68 @@
-# theater-booking
-A theater reservation system, built with react, aiming to offer a user friendly application for the audience.
-# Theater Reservation App 🎭
+Σύνδεςμος Github: https://github.com/kleisthenisgr/theater-booking
 
-A full-stack mobile application built with React Native (Expo) and Node.js/MySQL. It allows users to browse theaters, view shows, book specific seats dynamically, and manage their reservations.
 
-## Features
-* **User Authentication:** Register, login, and secure sessions using JWT.
-* **Browse Shows:** View available theaters, shows, and dates.
-* **Interactive Seat Booking:** Select the number of seats and view real-time availability.
-* **Profile Management:** View active reservations, cancel bookings, or delete account.
+Εφαρμογή Κράτησης Θεάτρου 🎭
 
-## Prerequisites
-To run this project locally, you will need:
-* [Node.js](https://nodejs.org/) installed.
-* [XAMPP](https://www.apachefriends.org/index.html) or any local MySQL server.
-* [Expo Go](https://expo.dev/client) app installed on your iOS or Android device.
-* Git installed (to clone the repository).
+Μια ολοκληρωμένη εφαρμογή για κινητά που έχει δημιουργηθεί με React Native (Expo) και Node.js/MySQL.
+Επιτρέπει στους χρήστες να περιηγούνται σε θέατρα, να βλέπουν παραστάσεις, να κάνουν δυναμική κράτηση συγκεκριμένων θέσεων και να διαχειρίζονται τις κρατήσεις τους.
 
----
+Χαρακτηριστικά
+Έλεγχος ταυτότητας χρήστη: Εγγραφή, σύνδεση και ασφαλείς συνεδρίες χρησιμοποιώντας το JWT.
+Περιήγηση σε παραστάσεις: Δείτε διαθέσιμα θέατρα, παραστάσεις και ημερομηνίες.
+Διαδραστική κράτηση θέσεων: Επιλέξτε τον αριθμό των θέσεων και δείτε τη διαθεσιμότητα σε πραγματικό χρόνο.
+Διαχείριση προφίλ: Δείτε ενεργές κρατήσεις, ακυρώστε κρατήσεις ή διαγράψτε λογαριασμό.
 
-## 🚀 Installation & Setup Guide
+Προαπαιτούμενα
+Για να εκτελέσετε αυτό το έργο τοπικά, θα χρειαστείτε:
+Εγκαταστημένο Node.js.
+XAMPP ή οποιονδήποτε τοπικό διακομιστή MySQL.
+Εγκαταστημένη εφαρμογή Expo Go στη συσκευή σας iOS ή Android.
+Εγκαταστημένο Git (για clone git).
 
-### 1. Database Setup
-1. Start **Apache** and **MySQL** from your XAMPP Control Panel.
-2. Open phpMyAdmin (usually `http://localhost/phpmyadmin`).
-3. Create a new database named `theaterdb`.
-4. Import the `.sql` file included in this repository to create the tables and dummy data.
+🚀 Οδηγός εγκατάστασης και ρύθμισης
+1. Ρύθμιση βάσης δεδομένων Εκκινήστε το Apache και το MySQL από τον Πίνακα ελέγχου XAMPP.
+Ανοίξτε το phpMyAdmin (συνήθως http://localhost/phpmyadmin).
+Δημιουργήστε μια νέα βάση δεδομένων με το όνομα theatredb.
+Εισαγάγετε το αρχείο .sql που περιλαμβάνεται σε αυτό το αποθετήριο για να δημιουργήσετε τους πίνακες και τα εικονικά δεδομένα.
+2. Ρύθμιση Backend Ανοίξτε ένα τερματικό και μεταβείτε στον φάκελο backend:
 
-### 2. Backend Setup
-1. Open a terminal and navigate to the backend folder:
-   cd backend
+cd backend
 
-    Install the necessary dependencies:
+Εγκαταστήστε τις απαραίτητες εξαρτήσεις:
 
-    npm install
+npm install
 
-    Create a .env file in the backend folder and add your database, JWT, and IP configurations. Replace YOUR_IPv4_ADDRESS with your actual local network IP (e.g., 192.168.1.14):
+Δημιουργήστε ένα αρχείο .env στον φάκελο backend και προσθέστε τις διαμορφώσεις βάσης δεδομένων, JWT και IP.
 
-    PORT=3000
-    DB_HOST=localhost
-    DB_USER=root
-    DB_PASS=
-    DB_NAME=theaterdb
-    JWT_SECRET=your_super_secret_key_here
-    BASE_IP=YOUR_IPv4_ADDRESS
+Αντικαταστήστε τη διεύθυνση YOUR_IPv4_ADDRESS με την πραγματική διεύθυνση IP του τοπικού σας δικτύου (π.χ., 192.168.1.14):
+PORT=3000
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=
+DB_NAME=theaterdb
+JWT_SECRET=your_super_secret_key_here
+BASE_IP=YOUR_IPv4_ADDRESS
 
-    Start the server:
+Εκκίνηση του διακομιστή:
 
-    npm start
+npm start
 
-    Note: Ensure your backend terminal shows the network IP. Keep this terminal open.
+Σημείωση: Βεβαιωθείτε ότι το τερματικό backend εμφανίζει τη διεύθυνση IP του δικτύου. Διατηρήστε αυτό το τερματικό ανοιχτό.
 
-2. Frontend Setup
+Ρύθμιση Frontend
+Ανοίξτε ένα νέο παράθυρο τερματικού και μεταβείτε στον φάκελο frontend:
 
-    Open a new terminal window and navigate to the frontend folder:
+cd frontend
 
-    cd frontend
+Εγκαταστήστε τα απαραίτητα modules:
 
-    Install the necessary dependencies:
+npm install
 
-    npm install
+Ρυθμίστε τη σύνδεση API παραμετροποιώντας το αρχείο .env μέσα στον φάκελο frontend:
+Αντικαταστήστε το YOUR_IPv4_ADDRESS με την πραγματική διεύθυνση IP του τοπικού σας δικτύου EXPO_PUBLIC_API_URL=http://YOUR_IPv4_ADDRESS:3000/api
 
-    Configure the API connection by creating a .env file inside the frontend folder:
+Εκκινήστε την εφαρμογή Expo (χρησιμοποιώντας τη σημαία -c για να καθαρίσετε την προσωρινή μνήμη και να φορτώσετε τις νέες μεταβλητές περιβάλλοντος):
 
-    # Replace YOUR_IPv4_ADDRESS with your actual local network IP
-    EXPO_PUBLIC_API_URL=http://YOUR_IPv4_ADDRESS:3000/api
+npx expo start -c
 
-    Start the Expo app (using the -c flag to clear the cache and load the new environment variables):
-
-    npx expo start -c
-
-    Scan the QR code shown in the terminal using the Expo Go app on your phone (ensure your phone and computer are on the same Wi-Fi network).
+Σαρώστε τον κωδικό QR που εμφανίζεται στο τερματικό χρησιμοποιώντας την εφαρμογή Expo Go στο τηλέφωνό σας (βεβαιωθείτε ότι το τηλέφωνο και ο υπολογιστής σας βρίσκονται στο ίδιο δίκτυο Wi-Fi).
